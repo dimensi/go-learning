@@ -50,7 +50,7 @@ func MergeSlices(firstSlice []float32, secondSlice []int32) []int {
 }
 
 func GetMapValuesSortedByKey(m map[int]string) []string {
-	var keys []int
+	keys := make([]int, 0, len(m))
 	for k := range m {
 		keys = append(keys, k)
 	}
